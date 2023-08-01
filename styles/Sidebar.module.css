@@ -1,0 +1,174 @@
+.sidebar {
+    background-color: white;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 25px 10px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebarTop {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+    margin-right: 8px;
+}
+
+.logoContain {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 35px;
+}
+
+.logoWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+
+.logoText {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #45464E;
+}
+
+.linkWrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.navText {
+    font-size: 12px;
+    color: #53545C;
+    margin-right: 15px;
+}
+
+.DashboardLogo {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    stroke: #53545C;
+    transition: 0.2s ease-in-out;
+}
+
+.DashboardLogo path[fill="#fff"] {
+    fill: transparent;
+}
+
+.selected:hover .DashboardLogo {
+    stroke: transparent;
+}
+
+.navLogo {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.selected:hover .navLogo path[stroke="#53545C"] {
+    stroke: white;
+}
+
+.selected:hover .navText {
+    color: white;
+}
+
+.counter {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #FFCC91;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter p {
+    font-size: 10px;
+    color: black;
+}
+
+.contactBtn {
+    height: 40px;
+    width: 100%;
+    background-color: #5E63661A;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.giftBtn {
+    height: 75px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    transition: 0.2s ease-in-out;
+    background-color: #FFCC9133;
+}
+.giftBtnWrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+}
+
+.giftRow {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.gift {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.giftText {
+    font-size: 12px;
+    color: #53545C;
+    margin: 0;
+    margin-right: 15px;
+}
+
+.giftTextAcc {
+    font-size: 10px;
+    color: #53545C;
+    margin: 0;
+    margin-right: 12px;
+}
+
+.rightArrow {
+    stroke: #53545C;
+}
+
+.logoutText {
+    font-size: 12px;
+    color: #CC5F5F;
+    margin: 0;
+}
