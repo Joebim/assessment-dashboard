@@ -101,9 +101,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.counter p {
     font-size: 10px;
     color: black;
 }

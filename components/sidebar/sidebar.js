@@ -74,7 +74,7 @@ function Sidebar() {
             <li>
               <Link href="/other-pages/some-page">
                 <div className={styles.linkWrap}>
-                  <Chat width={10} height={10} className={styles.navLogo} />
+                  <Chat width={10} height={10} className={styles.logo} />
                   <p className={styles.navText}>Conversations</p>
                   <Counter count={6} />
                 </div>
