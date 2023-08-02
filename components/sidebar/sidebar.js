@@ -12,11 +12,98 @@ import styles from "../../styles/Sidebar.module.css";
 import Counter from "./Counter";
 import Logout from "../../public/logout.svg";
 import { FiChevronRight } from "react-icons/fi";
+import { useRouter } from "next/router";
+import { it } from "faker/lib/locales";
+import { useContext, useState } from "react";
+import { HiMenu } from "react-icons/hi";
+import { MenuContext } from "../context/menuContext";
 
 function Sidebar() {
+  const [isCollapse, setIsCollapse] = useContext(MenuContext);
+
+
+  const toggleMenu = () => {
+    setIsCollapse((prev) => !prev);
+  };
+  const router = useRouter();
+
+  console.log("router.pathname", router.pathname);
+
+  // Define your sidebar items with their paths
+  const sidebarItems = [
+    {
+      name: "Dashboard",
+      path: "/dashboard",
+      counter: 6,
+      isCount: false,
+      icon: (
+        <Category
+          width={10}
+          height={10}
+          className={`${styles.DashboardLogo} DashboardLogo`}
+        />
+      ),
+    },
+    {
+      name: "Orders",
+      path: "/other-pages/orders",
+      counter: 6,
+      isCount: true,
+      icon: (
+        <Bag width={10} height={10} className={`${styles.navLogo} navLogo`} />
+      ),
+    },
+    {
+      name: "Customers",
+      path: "/other-pages/customers",
+      counter: 6,
+      isCount: false,
+      icon: (
+        <User width={10} height={10} className={`${styles.navLogo} navLogo`} />
+      ),
+    },
+    {
+      name: "Inventory",
+      path: "/other-pages/inventory",
+      counter: 6,
+      isCount: false,
+      icon: (
+        <Folder
+          width={10}
+          height={10}
+          className={`${styles.navLogo} navLogo`}
+        />
+      ),
+    },
+    {
+      name: "Conversations",
+      path: "/other-pages/conversations",
+      counter: 6,
+      isCount: true,
+      icon: (
+        <Chat width={10} height={10} className={`${styles.navLogo} navLogo`} />
+      ),
+    },
+    {
+      name: "Settings",
+      path: "/other-pages/settings",
+      counter: 6,
+      isCount: false,
+      icon: (
+        <Settings
+          width={10}
+          height={10}
+          className={`${styles.navLogo} navLogo`}
+        />
+      ),
+    },
+    // Add more sidebar items as needed
+  ];
+
   return (
-    <div className={styles.sidebar}>
-      <div className={styles.sidebarTop}>
+    <div className={`${styles.sidebar} ${isCollapse ? "sidebar-collapse" : "sidebar-visible"}`}>
+      <div className={`${styles.sidebarContain} `}>
+        <div className={styles.sidebarTop}>
         <div className={styles.logoContain}>
           <div className={styles.logoWrapper}>
             <Image
@@ -26,70 +113,35 @@ function Sidebar() {
               height={16}
               className={styles.logo}
             />
-            <h1 className={styles.logoText}>Metrics</h1>
+            <h1 className={`${styles.logoText} logoText`}>Metrics</h1>
+          </div>
+          <div className={styles.menuContain}
+          onClick={toggleMenu}
+          >
+            <HiMenu width={10} height={10} className={`${styles.menuLogo}`} />
           </div>
         </div>
         <nav>
           <ul>
-            <li>
-              <Link href="/dashboard">
-                <div className={styles.linkWrap}>
-                  <Category
-                    width={10}
-                    height={10}
-                    className={styles.DashboardLogo}
-                  />
-                  <p className={styles.navText}>Dashboard</p>
-                  <Counter count={6} />
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/other-pages/some-page">
-                <div className={styles.linkWrap}>
-                  <Bag width={10} height={10} className={styles.navLogo} />
-                  <p className={styles.navText}>Orders</p>
-                  <Counter count={6} />
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/other-pages/some-page">
-                <div className={styles.linkWrap}>
-                  <User width={10} height={10} className={styles.navLogo} />
-                  <p className={styles.navText}>Customers</p>
-                  <Counter count={6} />
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/other-pages/some-page">
-                <div className={styles.linkWrap}>
-                  <Folder width={10} height={10} className={styles.navLogo} />
-                  <p className={styles.navText}>Inventory</p>
-                  <Counter count={6} />
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/other-pages/some-page">
-                <div className={styles.linkWrap}>
-                  <Chat width={10} height={10} className={styles.logo} />
-                  <p className={styles.navText}>Conversations</p>
-                  <Counter count={6} />
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link href="/other-pages/some-page">
-                <div className={styles.linkWrap}>
-                  <Settings width={10} height={10} className={styles.navLogo} />
-                  <p className={styles.navText}>Settings</p>
-                  <Counter count={6} />
-                </div>
-              </Link>
-            </li>
-            {/* Add more navigation links as needed */}
+            {sidebarItems.map((item, index) => (
+              <li
+                key={index}
+                className={`${router.pathname === item.path ? "selected" : ""}`}
+              >
+                <Link href={item.path}>
+                  <div className={`${styles.linkWrap} linkWrap`}>
+                    {item.icon}
+                    <p className={`${styles.navText} navText`}>{item.name}</p>
+
+                    {item.isCount === true ? (
+                      <Counter count={item.counter} toggleClass="counter"/>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
@@ -98,58 +150,44 @@ function Sidebar() {
         <ul>
           <div className={styles.contactBtn}>
             <Link href="/other-pages/some-page">
-              <div className={styles.linkWrap}>
+              <div className={`${styles.linkWrap} linkWrap`}>
                 <Headphones width={10} height={10} className={styles.navLogo} />
-                <p className={styles.navText}>Contact Support</p>
+                <p className={`${styles.navText} navText`}>Contact Support</p>
               </div>
             </Link>
           </div>
-          <div className={styles.giftBtn}>
+          <div className={`${styles.giftBtn} giftBtn`}>
             <Link href="/other-pages/some-page">
-              <div className={styles.giftBtnWrap}>
+              <div className={`${styles.giftBtnWrap} giftBtnWrap`}>
                 <div className={styles.giftRow}>
-                  <div className={styles.gift}>
-                    <Gift width={10} height={10} className={styles.navLogo} />
-                    <p className={styles.giftText}>Free Gift Awaits You!</p>
+                  <div className={`${styles.gift} gift`}>
+                    <Gift width={10} height={10} className={`${styles.navLogo} navLogo`} />
+                    <p className={`${styles.giftText} giftText`}>Free Gift Awaits You!</p>
                   </div>
                 </div>
                 <div className={styles.giftRow}>
-                  <div className={styles.gift}>
-                    <p className={styles.giftTextAcc}>Upgrade your account</p>
-                    <FiChevronRight height="20" className={styles.rightArrow} />
+                  <div className={`${styles.gift} gift`}>
+                    <p className={`${styles.giftTextAcc} giftTextAcc`}>Upgrade your account</p>
+                    <FiChevronRight height="20" className={`${styles.rightArrow} rightArrow`} />
                   </div>
                 </div>
               </div>
             </Link>
           </div>
-          <div className={styles.logoutBtn}>
+          <div className={`${styles.logoutBtn} logoutBtn`}>
             <Link href="/other-pages/some-page">
               <div className={styles.linkWrap}>
-                <Logout width={10} height={10} className={styles.navLogo} />
-                <p className={styles.logoutText}>Logout</p>
+                <Logout width={10} height={10} className={`${styles.navLogo} navLogo`} />
+                <p className={`${styles.logoutText} logoutText`}>Logout</p>
               </div>
             </Link>
           </div>
         </ul>
       </div>
+      </div>
+      
     </div>
-    // <aside className ={styles.sidebar}>
-    //   <nav>
-    //     <ul>
-    //       <li>
-    //         <Link href="/dashboard">
-    //           <p>Dashboard</p>
-    //         </Link>
-    //       </li>
-    //       <li>
-    //         <Link href="/other-pages/some-page">
-    //           <p>Some Page</p>
-    //         </Link>
-    //       </li>
-    //       {/* Add more navigation links as needed */}
-    //     </ul>
-    //   </nav>
-    // </aside>
+
   );
 }
 

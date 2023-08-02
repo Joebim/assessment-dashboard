@@ -53,6 +53,207 @@ h1 {
   height: 8px !important;
 }
 
+.selected .DashboardLogo {
+  stroke: transparent;
+}
+
+
+.selected:hover .DashboardLogo {
+  stroke: #53545C;
+}
+
+
+.selected .navLogo path[stroke="#53545C"] {
+  stroke: white;
+}
+
+.selected .navText {
+  color: white;
+}
+
+.selected:hover .navText {
+  color: #53545C;
+}
+
+.selected {
+  background-color: #5570F1;
+}
+
+/* CSS for hiding the element */
+.hidden {
+  opacity: 0;
+display: none;
+pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+/* CSS for showing the element */
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
+.sidebar-collapse {
+  width: 90px !important;
+  padding: 10px 22px 10px 22px !important;
+}
+
+.sidebar-collapse .navText {
+
+  opacity: 0;
+display: none;
+pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.sidebar-visible .navText {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
+.sidebar-collapse .navLogo,
+.sidebar-collapse .DashboardLogo {
+  margin-right: 0px !important;
+}
+
+.sidebar-collapse li {
+  height: 43px !important;
+  width: 43px !important;
+}
+
+.sidebar-collapse .counter {
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.sidebar-collapse .linkWrap {
+  padding-right: 12px !important;
+}
+
+.sidebar-collapse .giftText {
+
+  opacity: 0;
+display: none;
+pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.sidebar-visible .giftText {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
+.sidebar-collapse .giftTextAcc {
+
+  opacity: 0;
+display: none;
+pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.sidebar-visible .giftTextAcc {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
+.sidebar-collapse .logoutText {
+
+  opacity: 0;
+display: none;
+pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.sidebar-visible .logoutText {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
+.sidebar-collapse .navText {
+
+  opacity: 0;
+display: none;
+pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.sidebar-visible .navText {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
+.sidebar-collapse .rightArrow {
+
+  opacity: 0;
+display: none;
+pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.sidebar-visible .rightArrow {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
+.sidebar-collapse .logoText {
+
+  opacity: 0;
+display: none;
+pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.sidebar-visible .logoText {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
+.sidebar-collapse .giftBtnWrap {
+  padding: 10px 10px 10px 10px !important;
+}
+
+.sidebar-collapse .giftBtn {
+  height: 45px !important;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  padding-right: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8ecff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #91a3ff;
+  border-radius: 5px;
+  -webkit-animation: scroll 3s;
+  animation: scroll 3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5570F1;
+  transition: 3s ease;
+}
 
 
 

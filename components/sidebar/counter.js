@@ -3,7 +3,7 @@ import styles from "../../styles/Sidebar.module.css";
 
 export default function Counter(props) {
   return (
-    <div className={styles.counter}>
+    <div className={`${styles.counter} ${props.toggleClass}`}>
         {props.count}
     </div>
   )

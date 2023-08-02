@@ -1,11 +1,14 @@
 import "../styles/globals.css";
 import Sidebar from "../components/sidebar/sidebar";
+import { MenuContext, MenuProvider } from "../components/context/menuContext";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Sidebar />
-      <Component {...pageProps} />
+      <MenuProvider>
+        <Sidebar />
+        <Component {...pageProps} />
+      </MenuProvider>
     </>
   );
 }

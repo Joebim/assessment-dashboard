@@ -18,93 +18,120 @@ import DonutChart from "../components/charts/Donut-chart";
 import BarChart from "../components/charts/bar-chart";
 import { barChartOptions } from "../shared/data";
 import { barChartData } from "../shared/data";
+import { MenuContext } from "../components/context/menuContext";
+import { useContext } from "react";
 
-export default function dashboard() {
+export default function Dashboard() {
 
+  const [isCollapse, setIsCollapse] = useContext(MenuContext);
+
+  
   var options = {
     series: [
-    {
-      data: [
-        {
-          x: 'Sept 10',
-          y: [0, 4500]
-        },
-        {
-          x: 'Sept 11',
-          y: [0, 4100]
-        },
-        {
-          x: 'Sept 12',
-          y: [0, 7800]
-        },
-        {
-          x: 'Sept 13',
-          y: [0, 4600]
-        },
-        {
-          x: 'Sept 14',
-          y: [0, 4100]
-        },
-        {
-          x: 'Sept 15',
-          y: [0, 6500]
-        },
-        {
-          x: 'Sept 16',
-          y: [0, 5600]
-        }
-      ]
-    }
-  ],
+      {
+        data: [
+          {
+            x: "Sept 10",
+            y: [0, 20],
+          },
+          {
+            x: "Sept 11",
+            y: [0, 100],
+          },
+          {
+            x: "Sept 12",
+            y: [0, 80],
+          },
+          {
+            x: "Sept 13",
+            y: [0, 60],
+          },
+          {
+            x: "Sept 14",
+            y: [0, 20],
+          },
+          {
+            x: "Sept 15",
+            y: [0, 55],
+          },
+          {
+            x: "Sept 16",
+            y: [0, 70],
+          },
+        ],
+      },
+    ],
     chart: {
-    height: 200,
-    type: 'rangeBar',
-    zoom: {
-      enabled: false
-    }
-  },
-  plotOptions: {
-    bar: {
-      isDumbbell: false,
-      columnWidth: 10,
-      dumbbellColors: [['#008FFB', '#00E396']],
-      borderRadius: 4,
-    }
-  },
-  legend: {
-    show: false,
-    showForSingleSeries: true,
-    position: 'top',
-    horizontalAlign: 'left',
-    customLegendItems: ['Product A', 'Product B']
-  },
-  fill: {
-    type: 'gradient',
-    gradient: {
-      type: 'vertical',
-      gradientToColors: ['#00E396'],
-      inverseColors: true,
-      stops: [2, 100]
-    }
-  },
-  grid: {
-    xaxis: {
-      lines: {
-        show: false
-      }
+      height: 200,
+      type: "rangeBar",
+      zoom: {
+        enabled: false,
+      },
+    },
+    plotOptions: {
+      bar: {
+        isDumbbell: false,
+        columnWidth: 10,
+        dumbbellColors: [["#008FFB", "#00E396"]],
+        borderRadius: 4,
+      },
+    },
+    legend: {
+      show: false,
+      showForSingleSeries: true,
+      position: "top",
+      horizontalAlign: "left",
+      customLegendItems: ["Product A", "Product B"],
+    },
+    fill: {
+      type: "gradient",
+      gradient: {
+        type: "vertical",
+        gradientToColors: ["#00E396"],
+        inverseColors: true,
+        stops: [2, 100],
+      },
+    },
+    grid: {
+      xaxis: {
+        lines: {
+          show: false,
+        },
+      },
+      yaxis: {
+        lines: {
+          show: false,
+        },
+      },
     },
     yaxis: {
-      lines: {
-        show: false
-      }
-    }
-  },
-  xaxis: {
-    tickPlacement: 'on',
-    categories: ['20k', '40k', '60k', '80k', '100k']
-  }
+      labels: {
+        show: true,
+        formatter: (value) => {
+          if (value >= 1000) {
+            return `${(value / 1000).toFixed(1)}k`;
+          } else {
+            return value;
+          }
+        },
+        style: {
+          fontSize: "10px", // Reduce the font size of y-axis labels
+          colors: "#A6A8B1",
+        },
+      },
+    },
+    xaxis: {
+      tickPlacement: "on",
+      categories: ["20", "40", "60", "80", "100"],
+      labels: {
+        show: true,
+        style: {
+          fontSize: "10px", // Reduce the font size of x-axis labels
+          colors: "#A6A8B1",
+        },
+      },
+    },
   };
-
 
   let NGNaira = new Intl.NumberFormat("en-NG", {
     style: "currency",
@@ -114,7 +141,7 @@ export default function dashboard() {
   console.log("sales", sales);
 
   return (
-    <div className={styles.dashboard}>
+    <div className={`${styles.dashboard} ${isCollapse ? "dashboard-collapse" : "sidebar-visible"}`}>
       <Navbar />
       <div className={styles.dashboardContain}>
         <div className={styles.sale}>
@@ -303,7 +330,7 @@ export default function dashboard() {
           </div>
         </div>
         <div className={styles.summary}>
-        <div className={styles.cardTopInfo}>
+          <div className={styles.cardTopInfo}>
             <div className={styles.summaryTitleContain}>
               <h1>Marketing</h1>
               <div className={styles.summaryDropdown}>
