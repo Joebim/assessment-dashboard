@@ -18,8 +18,9 @@ import { useContext, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { MenuContext } from "../context/menuContext";
 
+
 function Sidebar() {
-  const [isCollapse, setIsCollapse] = useContext(MenuContext);
+  const {isCollapse}= useContext(MenuContext);
 
 
   const toggleMenu = () => {
@@ -116,7 +117,7 @@ function Sidebar() {
             <h1 className={`${styles.logoText} logoText`}>Metrics</h1>
           </div>
           <div className={styles.menuContain}
-          onClick={toggleMenu}
+          onClick={()=> (router.push("/dashboard"))}
           >
             <HiMenu width={10} height={10} className={`${styles.menuLogo}`} />
           </div>

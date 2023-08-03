@@ -1,6 +1,7 @@
 .dashboard {
+    padding-top: 80px;
     padding-left: 250px;
-    height: 110vh;
+    height: 130vh;
 }
 
 .dashboardContain {
@@ -214,6 +215,7 @@
     flex-direction: row;
     align-items: center;
     padding: 5px 10px 5p 10px;
+    cursor: pointer;
 }
 
 .orderItemPhoto {

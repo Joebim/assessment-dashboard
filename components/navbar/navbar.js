@@ -4,8 +4,11 @@ import Home from "../../public/Home.svg";
 import Notification from "../../public/Notification.svg";
 import styles from "../../styles/Navbar.module.css";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { useRouter } from "next/dist/client/router";
 
 export default function Navbar() {
+
+  const router = useRouter();
   return (
     <div className={styles.navbar}>
       <div className={styles.navTopBar}>
@@ -24,7 +27,8 @@ export default function Navbar() {
         </div>
       </div>
       <div className={styles.navBreadcrumbBar}>
-        <Home />
+        <Home />/
+        <p className={styles.crumbs}>{router.pathname}</p>
       </div>
     </div>
   );

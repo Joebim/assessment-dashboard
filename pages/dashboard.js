@@ -20,12 +20,12 @@ import { barChartOptions } from "../shared/data";
 import { barChartData } from "../shared/data";
 import { MenuContext } from "../components/context/menuContext";
 import { useContext } from "react";
+import Router from "next/router";
 
 export default function Dashboard() {
 
-  const [isCollapse, setIsCollapse] = useContext(MenuContext);
+  const {isCollapse} = useContext(MenuContext);
 
-  
   var options = {
     series: [
       {
@@ -138,11 +138,15 @@ export default function Dashboard() {
     currency: "NGN",
   });
 
+  console.log('isCollapse', isCollapse)
+
   console.log("sales", sales);
 
   return (
+    // <MenuContext.Consumer>
+    //     {({ isCollapse, setIsCollapse }) => (
     <div className={`${styles.dashboard} ${isCollapse ? "dashboard-collapse" : "sidebar-visible"}`}>
-      <Navbar />
+      
       <div className={styles.dashboardContain}>
         <div className={styles.sale}>
           <div className={styles.cardTopInfo}>
@@ -367,5 +371,7 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
+    //  )}
+    //  </MenuContext.Consumer>
   );
 }

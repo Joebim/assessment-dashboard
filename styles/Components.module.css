@@ -1,0 +1,70 @@
+.logo {
+    min-width: 30px;
+    min-height: 50px;
+    margin-right: 10px;
+    transition: 0.2s ease-in-out;
+    transform: sscale(0.5);
+}
+
+.RightBubbleContain {
+    height: 300px;
+    width: 100%;
+    background-color: bisque;
+}
+
+.sentInfoRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    height: 90px;
+    width: 50%;
+}
+
+.info {
+    flex: 1;
+}
+
+.orderItem {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    height: 100%;
+}
+
+.orderItemPhoto {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    flex: 1;
+    width: 40px;
+    height: 100%;
+}
+
+.orderItemWrap {
+    flex: 1;
+}
+
+.orderItemTop p{
+    font-size: 11px;
+    margin-right: 10px;
+    color: #BEC0CA;
+}
+
+.avaliable {
+    flex: 1;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: 30px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px 20px 40px;
+}
