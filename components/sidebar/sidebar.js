@@ -24,6 +24,17 @@ function Sidebar() {
 
   const router = useRouter();
 
+  const toggleSidebar = (path) => {
+    const currentRoute = router.pathname;
+    if (currentRoute === path) {
+      toggleState.setIsCollapse(!isCollapse)
+    }
+  };
+
+ 
+    
+
+
   const sidebarItems = [
     {
       name: "Dashboard",
@@ -124,7 +135,7 @@ function Sidebar() {
               {sidebarItems.map((item, index) => (
                 <li
                   key={index}
-                  onClick={() => toggleState.setIsCollapse(!isCollapse)}
+                  onClick={() => {toggleSidebar(item.path)}}
                   className={`${
                     router.pathname === item.path ? "selected" : ""
                   }`}
