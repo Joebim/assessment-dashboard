@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styles from "../../styles/Conversations.module.css";
 import { CiSearch } from "react-icons/ci";
 import { users } from "../../shared/data";
@@ -11,8 +11,20 @@ import Plus from "../../public/plus.svg";
 import RightBubble from "../../components/chat-bubble/right-bubble";
 import LeftBubble from "../../components/chat-bubble/left-bubble";
 import Timeline from "../../components/timeline/timeline";
+import Link from "next/link";
+import { RiSendPlaneFill } from "react-icons/ri";
+import { useRouter } from "next/router";
+
 
 export default function Conversations() {
+
+  const router = useRouter();
+  const chatRef = useRef(null);
+
+  useEffect(() => {
+    chatRef.current.scrollTop = chatRef.current.scrollHeight;
+  }, [router.pathname]);
+
   return (
     <>
       <div className={styles.conversations}>
@@ -90,31 +102,47 @@ export default function Conversations() {
                 </div>
               </div>
 
-              <div className={styles.chatBody}>
-                  <RightBubble users={users}/>
-                  <Timeline/>
-                  <LeftBubble users={users}/>
+              <div ref={chatRef} className={styles.chatBody}>
+                {users.map((user, id) => (
+                  <div key={id}>
+                    {user.type === "sender" ? (
+                      <RightBubble user={user} />
+                    ) : (
+                      <LeftBubble user={user} />
+                    )}
+                  </div>
+                ))}
               </div>
 
               <div className={styles.chats}>
                 <div className={styles.chatBarSearch}>
-                  <Plus width={23} height={23} className={styles.searchBarIcon}/>
+                  <Plus
+                    width={23}
+                    height={23}
+                    className={styles.searchBarIcon}
+                  />
                   <input
                     type="text"
                     placeholder="Your Message"
                     className={styles.chatbarInput}
                   />
                   <div className={styles.reactionContain}>
-                    <Smile width={23} height={23} className={styles.smileIcon}/>
-                  <div className={styles.sendButton}>
-                    <p>Send</p>
-                  <Send width={23} height={23} className={styles.searchBarIcon}/>
-                  </div>
-                  
+                    <Smile
+                      width={23}
+                      height={23}
+                      className={styles.smileIcon}
+                    />
+                    <div className={styles.sendButton}>
+                      <p>Send</p>
+                      <RiSendPlaneFill
+                        width="20"
+                        height="20"
+                        className={styles.searchBarIcon}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

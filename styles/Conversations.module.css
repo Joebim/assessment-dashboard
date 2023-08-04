@@ -1,12 +1,10 @@
 .conversations {
     padding-top: 80px;
-    padding-left: 250px;
-    height: 130vh;
-
+    height: 121vh;
 }
 
 .conversationsContain {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     padding: 20px;
     display: flex;
@@ -37,6 +35,12 @@
     padding: 6px 20px 6px 20px;
     background-color: #5570F1;
     border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.conversationsMessageBtn:hover {
+    background-color: #5b6fd3;
 }
 
 .conversationsMessageBtn p {
@@ -49,6 +53,7 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 
 .conversationsBottomLeft {
@@ -89,6 +94,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .conversationCardRight {}
@@ -137,7 +143,7 @@
 .chatContain:hover {
     border-right: 2px solid #b7c3fd;
     background-color: #F7F7FC;
-
+    transition: 0.2s ease;
 }
 
 .orderchat {
@@ -299,6 +305,9 @@ margin-right: 4px;
 
 .searchBarIcon {
     margin-right: 10px;
+    color: black;
+    font-size: 11px;
+    cursor: pointer;
 }
 
 .smileIcon {
@@ -312,6 +321,12 @@ margin-right: 4px;
     align-items: center;
     background-color: #FFF2E2;
     border-radius: 4px;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.sendButton:hover {
+    background-color: #ffb05633;
 }
 
 .sendButton p {
@@ -332,6 +347,7 @@ margin-right: 4px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
 }
 
 .chatHead {
@@ -356,6 +372,8 @@ margin-right: 4px;
     flex: 8;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 20px;
 }
 
 .chats {

@@ -5,7 +5,6 @@ import Photo3 from "../../public/photo3.svg";
 import styles from "../../styles/Conversations.module.css";
 
 export default function Chat(props) {
-  console.log("props.users", props.users);
   return (
     <>
       {props.users.map((chat, id) => (

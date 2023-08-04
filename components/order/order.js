@@ -4,7 +4,6 @@ import Iphone1 from "../../public/iphone1.svg";
 import Iphone2 from "../../public/iphone2.svg";
 
 export default function Order(props) {
-  console.log("props.type", props.orders);
   return (
     <>
       {props.orders.map((item, id) => (

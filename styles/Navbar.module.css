@@ -82,6 +82,12 @@
     align-items: center;
     justify-content: center;
     background-color: #53545C;
+    overflow: hidden;
+}
+
+.icon {
+    height: 100%;
+    width: 100%;
 }
 
 .notificationLogo {

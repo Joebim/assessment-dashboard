@@ -1,16 +1,22 @@
 import "../styles/globals.css";
 import Sidebar from "../components/sidebar/sidebar";
-import { MenuContext, MenuProvider } from "../components/context/menuContext";
+import { MenuContext } from "../components/context/menuContext";
 import Navbar from "../components/navbar/navbar";
+import { useState } from 'react';
 
 function MyApp({ Component, pageProps }) {
+
+  const [isCollapse, setIsCollapse] = useState(false); 
+
   return (
     <>
-      <MenuProvider>
+    <MenuContext.Provider value={{ isCollapse: isCollapse, setIsCollapse: setIsCollapse }}>
         <Navbar />
         <Sidebar />
-        <Component {...pageProps} />
-      </MenuProvider>
+        <div className={`main ${isCollapse ? "main-collapse" : ""}`}>
+          <Component {...pageProps} />
+        </div>
+        </MenuContext.Provider>
     </>
   );
 }

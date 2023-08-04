@@ -24,8 +24,6 @@ import Router from "next/router";
 
 export default function Dashboard() {
 
-  const {isCollapse} = useContext(MenuContext);
-
   var options = {
     series: [
       {
@@ -63,6 +61,7 @@ export default function Dashboard() {
     ],
     chart: {
       height: 200,
+      width: '100%',
       type: "rangeBar",
       zoom: {
         enabled: false,
@@ -138,14 +137,12 @@ export default function Dashboard() {
     currency: "NGN",
   });
 
-  console.log('isCollapse', isCollapse)
 
-  console.log("sales", sales);
 
   return (
     // <MenuContext.Consumer>
     //     {({ isCollapse, setIsCollapse }) => (
-    <div className={`${styles.dashboard} ${isCollapse ? "dashboard-collapse" : "sidebar-visible"}`}>
+    <div className={`${styles.dashboard}`}>
       
       <div className={styles.dashboardContain}>
         <div className={styles.sale}>
@@ -336,7 +333,7 @@ export default function Dashboard() {
         <div className={styles.summary}>
           <div className={styles.cardTopInfo}>
             <div className={styles.summaryTitleContain}>
-              <h1>Marketing</h1>
+              <h1>Summary</h1>
               <div className={styles.summaryDropdown}>
                 <p>This Week</p>
                 <MdOutlineKeyboardArrowDown

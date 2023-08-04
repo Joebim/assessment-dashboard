@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "../../styles/Components.module.css";
 import Iphone1 from "../../public/iphone1.svg";
-import Iphone2 from "../../public/iphone2.svg";
+import Timeline from "../timeline/timeline";
 
-export default function RightBubble() {
+export default function RightBubble(props) {
   return (
     <>
       <div className={styles.RightBubbleContain}>
+        <div className={styles.TimelineContain}>
+          <Timeline timeline="12 August 2022"/>
+        </div>
         <div className={styles.sentInfoRight}>
           <div className={styles.info}>
             <div className={styles.orderItem}>
@@ -27,13 +30,12 @@ export default function RightBubble() {
 
         <div className={styles.chatBubbleRight}>
           <div className={styles.chatBubbleRightText}>
-            <p>Hi, I would like to know more about the product.</p>
+            <p>{props.user.chats}</p>
           </div>
-          <div className="chat-bubble-right-time"></div>
         </div>
 
         <div className={styles.chatTimeRight}>
-          <p>12:00</p>
+          <p>{props.user.time}</p>
         </div>
       </div>
     </>
