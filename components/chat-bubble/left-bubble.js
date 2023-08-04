@@ -17,7 +17,6 @@ export default function LeftBubble(props) {
                 <Iphone1 width={10} height={10} className={styles.logo} />
               </div>
               <div className={styles.orderItemWrap}>
-                {/* <div className={styles.orderItemTop}> */}
                 <div className={styles.orderItemTop}>
                   <p>iPhone 13</p>
                   <p>₦730,000.00</p>

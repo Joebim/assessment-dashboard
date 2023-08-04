@@ -114,7 +114,7 @@ export default function Dashboard() {
           }
         },
         style: {
-          fontSize: "10px", // Reduce the font size of y-axis labels
+          fontSize: "10px", 
           colors: "#A6A8B1",
         },
       },
@@ -125,7 +125,7 @@ export default function Dashboard() {
       labels: {
         show: true,
         style: {
-          fontSize: "10px", // Reduce the font size of x-axis labels
+          fontSize: "10px",
           colors: "#A6A8B1",
         },
       },
@@ -140,8 +140,6 @@ export default function Dashboard() {
 
 
   return (
-    // <MenuContext.Consumer>
-    //     {({ isCollapse, setIsCollapse }) => (
     <div className={`${styles.dashboard}`}>
       
       <div className={styles.dashboardContain}>
@@ -353,11 +351,8 @@ export default function Dashboard() {
             </div>
           </div>
           <div className={styles.marketingChartContain}>
-            {/* <div className={styles.marketingChartWrap}> */}
             <BarChart options={options} />;
-            {/* </div>
-            <div className={styles.chartCircleOverlayLarge}></div>
-            <div className={styles.chartCircleOverlaySmall}></div> */}
+    
           </div>
         </div>
         <div className={styles.orders}>
@@ -368,7 +363,6 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
-    //  )}
-    //  </MenuContext.Consumer>
+  
   );
 }

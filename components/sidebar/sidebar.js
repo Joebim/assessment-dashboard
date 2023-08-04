@@ -18,12 +18,9 @@ import { useContext, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { MenuContext } from "../context/menuContext";
 
-
 function Sidebar() {
-
   let toggleState = useContext(MenuContext);
-  const {isCollapse} = toggleState
-
+  const { isCollapse } = toggleState;
 
   const router = useRouter();
 
@@ -94,98 +91,121 @@ function Sidebar() {
         />
       ),
     },
-    // Add more sidebar items as needed
   ];
 
   return (
-    <div className={`${styles.sidebar} ${isCollapse ? "sidebar-collapse" : "sidebar-visible"}`}>
+    <div
+      className={`${styles.sidebar} ${
+        isCollapse ? "sidebar-collapse" : "sidebar-visible"
+      }`}
+    >
       <div className={`${styles.sidebarContain} `}>
         <div className={styles.sidebarTop}>
-        <div className={styles.logoContain}>
-          <div className={styles.logoWrapper}>
-            <Image
-              src="/Graph.svg"
-              alt="Vercel Logo"
-              width={16}
-              height={16}
-              className={styles.logo}
-              priority
-            />
-            <h1 className={`${styles.logoText} logoText`}>Metrics</h1>
+          <div className={styles.logoContain}>
+            <div className={styles.logoWrapper}>
+              <Image
+                src="/Graph.svg"
+                alt="Vercel Logo"
+                width={16}
+                height={16}
+                className={styles.logo}
+                priority
+              />
+              <h1 className={`${styles.logoText} logoText`}>Metrics</h1>
+            </div>
+            {/* <div
+              className={styles.menuContain}
+            >
+              <HiMenu width={10} height={10} className={`${styles.menuLogo}`} />
+            </div> */}
           </div>
-          <div className={styles.menuContain}
-          onClick={()=> toggleState.setIsCollapse(!isCollapse)}
-          >
-            <HiMenu width={10} height={10} className={`${styles.menuLogo}`} />
-          </div>
+          <nav>
+            <ul>
+              {sidebarItems.map((item, index) => (
+                <li
+                  key={index}
+                  onClick={() => toggleState.setIsCollapse(!isCollapse)}
+                  className={`${
+                    router.pathname === item.path ? "selected" : ""
+                  }`}
+                >
+                  <Link href={item.path}>
+                    <div className={`${styles.linkWrap} linkWrap`}>
+                      {item.icon}
+                      <p className={`${styles.navText} navText`}>{item.name}</p>
+
+                      {item.isCount === true ? (
+                        <Counter count={item.counter} toggleClass="counter" />
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
-        <nav>
+
+        <div className={styles}>
           <ul>
-            {sidebarItems.map((item, index) => (
-              <li
-                key={index}
-                className={`${router.pathname === item.path ? "selected" : ""}`}
-              >
-                <Link href={item.path}>
-                  <div className={`${styles.linkWrap} linkWrap`}>
-                    {item.icon}
-                    <p className={`${styles.navText} navText`}>{item.name}</p>
-
-                    {item.isCount === true ? (
-                      <Counter count={item.counter} toggleClass="counter"/>
-                    ) : (
-                      ""
-                    )}
+            <div className={`${styles.contactBtn} contactBtn`}>
+              <Link href="/other-pages/some-page">
+                <div className={`${styles.contactWrap} contactWrap`}>
+                  <Headphones
+                    width={10}
+                    height={10}
+                    className={`${styles.contactLogo} contactLogo`}
+                  />
+                  <p className={`${styles.navText} navText`}>Contact Support</p>
+                </div>
+              </Link>
+            </div>
+            <div className={`${styles.giftBtn} giftBtn`}>
+              <Link href="/other-pages/some-page">
+                <div className={`${styles.giftBtnWrap} giftBtnWrap`}>
+                  <div className={styles.giftRow}>
+                    <div className={`${styles.gift} gift`}>
+                      <Gift
+                        width={10}
+                        height={10}
+                        className={`${styles.navLogo} navLogo`}
+                      />
+                      <p className={`${styles.giftText} giftText`}>
+                        Free Gift Awaits You!
+                      </p>
+                    </div>
                   </div>
-                </Link>
-              </li>
-            ))}
+                  <div className={styles.giftRow}>
+                    <div className={`${styles.gift} gift`}>
+                      <p className={`${styles.giftTextAcc} giftTextAcc`}>
+                        Upgrade your account
+                      </p>
+                      <FiChevronRight
+                        height="20"
+                        className={`${styles.rightArrow} rightArrow`}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className={`${styles.logoutBtn} logoutBtn`}>
+              <Link href="/other-pages/some-page">
+                <div className={styles.linkWrap}>
+                  <Logout
+                    width={10}
+                    height={10}
+                    className={`${styles.navLogo} navLogo`}
+                  />
+                  <p className={`${styles.logoutText} logoutText`}>Logout</p>
+                </div>
+              </Link>
+            </div>
           </ul>
-        </nav>
+        </div>
       </div>
-
-      <div className={styles}>
-        <ul>
-          <div className={`${styles.contactBtn} contactBtn`} >
-            <Link href="/other-pages/some-page">
-              <div className={`${styles.contactWrap} contactWrap`}>
-                <Headphones width={10} height={10} className={`${styles.contactLogo} contactLogo`} />
-                <p className={`${styles.navText} navText`}>Contact Support</p>
-              </div>
-            </Link>
-          </div>
-          <div className={`${styles.giftBtn} giftBtn`}>
-            <Link href="/other-pages/some-page">
-              <div className={`${styles.giftBtnWrap} giftBtnWrap`}>
-                <div className={styles.giftRow}>
-                  <div className={`${styles.gift} gift`}>
-                    <Gift width={10} height={10} className={`${styles.navLogo} navLogo`} />
-                    <p className={`${styles.giftText} giftText`}>Free Gift Awaits You!</p>
-                  </div>
-                </div>
-                <div className={styles.giftRow}>
-                  <div className={`${styles.gift} gift`}>
-                    <p className={`${styles.giftTextAcc} giftTextAcc`}>Upgrade your account</p>
-                    <FiChevronRight height="20" className={`${styles.rightArrow} rightArrow`} />
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-          <div className={`${styles.logoutBtn} logoutBtn`}>
-            <Link href="/other-pages/some-page">
-              <div className={styles.linkWrap}>
-                <Logout width={10} height={10} className={`${styles.navLogo} navLogo`} />
-                <p className={`${styles.logoutText} logoutText`}>Logout</p>
-              </div>
-            </Link>
-          </div>
-        </ul>
-      </div>
-      </div>
-      
     </div>
-
   );
 }
 
