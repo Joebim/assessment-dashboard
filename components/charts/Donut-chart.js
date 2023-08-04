@@ -83,5 +83,4 @@ export default function DonutChart() {
       </div>
     );
   };
-// const domContainer = document.querySelector("#app");
 

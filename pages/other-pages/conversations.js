@@ -68,7 +68,6 @@ export default function Conversations() {
                   <Photo1 width={10} height={10} className={styles.chatLogo} />
 
                   <div className={styles.orderChatWrap}>
-                    {/* <div className={styles.orderchatTop}> */}
                     <div className={styles.orderChatTop}>
                       <p>Jane Doe</p>
 

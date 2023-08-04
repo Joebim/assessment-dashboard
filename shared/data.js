@@ -121,22 +121,3 @@ export const users = [
   { name: 'Ava', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
   { name: 'Alexander', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
 ];
-
-// const getRandomDate = (start, end) => {
-//   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-// };
-
-// // Generate chat messages for each user
-// for (let i = 0; i < users.length; i++) {
-//   const user = users[i];
-//   for (let j = 0; j < 5; j++) {
-//     let chat = '';
-//     for (let k = 0; k < 5; k++) {
-//       chat += faker.lorem.words(4) + ' '; // 20 words (4 words per message)
-//     }
-//     user.chats.push({
-//       time: getRandomDate(new Date(2023, 0, 1), new Date()), // Random date within this year
-//       message: chat.trim(),
-//     });
-//   }
-// }

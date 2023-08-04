@@ -79,7 +79,6 @@ h1 {
   background-color: #5570F1;
 }
 
-/* CSS for hiding the element */
 .hidden {
   opacity: 0;
   display: none;
@@ -88,7 +87,7 @@ h1 {
   transition: opacity 0.3s, visibility 0s 0.3s;
 }
 
-/* CSS for showing the element */
+
 .visible {
   opacity: 1;
   visibility: visible;

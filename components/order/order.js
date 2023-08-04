@@ -16,7 +16,6 @@ export default function Order(props) {
             )}
           </div>
           <div className={styles.orderItemWrap}>
-            {/* <div className={styles.orderItemTop}> */}
             <div className={styles.orderItemTop}>
               <p>{item.name}</p>
               <p>{item.date}</p>

@@ -19,7 +19,6 @@ export default function Chat(props) {
             )}
 
             <div className={styles.orderChatWrap}>
-              {/* <div className={styles.orderchatTop}> */}
               <div className={styles.orderChatTop}>
                 <p>{chat.name}</p>
                 {chat.new == true ? (

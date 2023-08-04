@@ -93,9 +93,7 @@
     transition: 0.2s ease-in-out;
 }
 
-.DashboardLogo path[fill="#fff"] {
-    /* fill: transparent; */
-}
+
 
 .navLogo {
     width: 22px;

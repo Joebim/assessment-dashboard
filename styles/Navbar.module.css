@@ -5,6 +5,7 @@
     padding-left: 250px;
     position: fixed;
     width: 100%;
+    transition: 0.3s ease-in-out;
 }
 
 .navTopBar {
