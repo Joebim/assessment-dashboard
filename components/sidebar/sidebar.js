@@ -38,7 +38,7 @@ function Sidebar() {
   const sidebarItems = [
     {
       name: "Dashboard",
-      path: "/dashboard",
+      path: "/",
       counter: 6,
       isCount: false,
       icon: (

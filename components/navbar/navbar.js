@@ -38,7 +38,7 @@ export default function Navbar() {
       </div>
       <div className={styles.navBreadcrumbBar}>
         <Home />/
-        <p className={styles.crumbs}>{router.pathname}</p>
+        <p className={styles.crumbs}>{router.pathname.replace('/other-pages', '')}</p>
       </div>
     </div>
   );
