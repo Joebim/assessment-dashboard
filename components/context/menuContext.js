@@ -1,15 +1,6 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext } from 'react';
 
 const MenuContext = createContext();
 
-const MenuProvider = ({ children }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  return (
-    <MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
-      {children}
-    </MenuContext.Provider>
-  );
-};
-
-export { MenuContext, MenuProvider };
+export { MenuContext };

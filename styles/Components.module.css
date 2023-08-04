@@ -1,0 +1,229 @@
+.logo {
+    min-width: 30px;
+    min-height: 50px;
+    margin-Left: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.LeftBubbleContain {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.TimelineContain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sentInfoLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding: 10px 0px 10px 0px;
+    width: 50%;
+}
+
+.info {
+    flex: 1;
+}
+
+.orderItem {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.orderItemPhoto {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    flex: 1;
+    width: 40px;
+    height: 100%;
+}
+
+.orderItemWrap {
+    flex: 1;
+}
+
+.orderItemTop p{
+    font-size: 11px;
+    margin-Left: 10px;
+    color: #BEC0CA;
+}
+
+.avaliable {
+    flex: 1;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    margin-left: 30px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #F4F5FA;
+    font-size: 10px;
+    color: #1C1D22;
+    border-radius: 5px;
+}
+
+.chatBubbleLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0px 10px 0px;
+    width: 50%;
+}
+
+.chatBubbleLeftText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #5570F1;
+    border-top-left-radius: 10px;
+    border-top-Right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-Right-radius: 0px;
+    padding: 10px;
+}
+
+.chatBubbleLeftText p {
+    color: white;
+    font-size: 12px;
+}
+
+.chatTimeLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chatTimeLeft p {
+    color: #8B8D97;
+    font-size: 11px;
+}
+
+.RightBubbleContain {
+    display: flex;
+    flex-direction: column;
+}
+
+.TimelineContain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sentInfoRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding: 10px 0px 10px 0px;
+    width: 50%;
+}
+
+.info {
+    flex: 1;
+}
+
+.orderItem {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.orderItemPhoto {
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    flex: 1;
+    width: 40px;
+    height: 100%;
+}
+
+.orderItemWrap {
+    flex: 1;
+}
+
+.orderItemTop p{
+    font-size: 11px;
+    margin-right: 10px;
+    color: #BEC0CA;
+}
+
+.avaliable {
+    flex: 1;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    margin-left: 30px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #F4F5FA;
+    font-size: 10px;
+    color: #1C1D22;
+    border-radius: 5px;
+}
+
+.chatBubbleRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0px 10px 0px;
+    width: 50%;
+}
+
+.chatBubbleRightText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #5570F1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+.chatBubbleRightText p {
+    color: white;
+    font-size: 12px;
+}
+
+.chatTimeRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chatTimeRight p {
+    color: #8B8D97;
+    font-size: 11px;
+}

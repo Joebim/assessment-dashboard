@@ -1,0 +1,383 @@
+.conversations {
+    padding-top: 80px;
+    height: 121vh;
+}
+
+.conversationsContain {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.conversationsWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.conversationsTopLeft h1 {
+    font-size: 12px;
+    color: #45464E;
+}
+
+
+.conversationsTopRight p {
+    font-size: 12px;
+    color: #45464E;
+}
+
+.conversationsMessageBtn {
+    padding: 6px 20px 6px 20px;
+    background-color: #5570F1;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.conversationsMessageBtn:hover {
+    background-color: #5b6fd3;
+}
+
+.conversationsMessageBtn p {
+    color: white;
+    font-size: 12px;
+}
+
+.conversationsBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.conversationsBottomLeft {
+    border-radius: 10px;
+    flex: 3.5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatListContain {
+    width: 100%;
+    padding: 20px;
+}
+
+.chatListHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatListHead h1 {
+    font-size: 15px;
+    color: #2C2D33;
+    font-weight: 500;
+}
+
+.chatListHead p {
+    font-size: 12px;
+    color: #A6A8B1;
+}
+
+.conversationsBottomRight {
+    padding: 20px;
+    border-radius: 10px;
+    flex: 6;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.conversationCardRight {}
+
+
+.chatSearch {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #F2F2F2;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0 0 0;
+    padding: 3px 10px 3px 10px;
+}
+
+.chatText {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #A6A8B1;
+}
+
+.chatTime {
+    font-size: 12px;
+    color: #A6A8B1;
+}
+
+.searchIcon {
+    color: #130F26;
+    margin-right: 10px;
+}
+
+.chatInput {
+    outline: none;
+    background-color: white !important;
+    border: none;
+    color: #2C2D33;
+}
+
+.chatContain {
+    cursor: pointer;
+}
+
+.chatContain:hover {
+    border-right: 2px solid #b7c3fd;
+    background-color: #F7F7FC;
+    transition: 0.2s ease;
+}
+
+.orderchat {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    padding: 0px 20px 0px 20px;
+    margin: 8px 0px 8px 0px;
+    transition: 1s ease;
+
+}
+
+/* .orderChatPhoto {
+    height: 100%;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+} */
+
+
+
+.chatList {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chatLogo {
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.chatText {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chatText p{
+    font-size: 9px;
+}
+
+.chatText div{
+    font-size: 8px;
+}
+
+.orderChatWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.orderChatTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 12px;
+    color: #2C2D33;
+    font-weight: 500;
+}
+
+.date {
+    font-size: 12px;
+    color: #A6A8B1;
+}
+
+.newToast {
+    background-color: #FEF5EA;
+    padding: 2px 10px 2px 10px;
+    border-radius: 6px;
+}
+
+.orderChatTop {
+    font-size: 12px;
+    font-weight: bold;
+    color: #2C2D33;
+}
+
+.newToast p{
+    font-size: 10px;
+    color: black;
+}
+
+.newCustomerToast {
+    background-color: #FEF5EA;
+    padding: 1px 5px 1px 5px;
+    border-radius: 6px;
+}
+
+.newCustomerToast p{
+    font-size: 10px;
+    color: black;
+}
+
+.chatHeadWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profileViewText {
+    font-size: 10px ;
+    color: #2C2D33 ;
+    margin-left: 10px ;
+}
+
+.chatHeadBar {
+    width: 100%;
+    height: 45px;
+    flex-direction: row;
+    display: flex;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+.OnlineDot {
+height: 7px;
+width: 7px;
+border-radius: 50%;
+background-color: #5570F1;
+margin-right: 4px;
+}
+
+.OnlineDotContain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 4px;
+}
+
+.OnlineDotContain p {
+    font-size: 12px !important;
+    color: #A6A8B1;
+}
+
+.OnlineDotWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2px;
+}
+
+.orderCount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchBarIcon {
+    margin-right: 10px;
+    color: black;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.smileIcon {
+    margin-right: 10px;
+}
+
+.sendButton {
+    padding: 3px 8px 3px 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #FFF2E2;
+    border-radius: 4px;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.sendButton:hover {
+    background-color: #ffb05633;
+}
+
+.sendButton p {
+    font-size: 12px;
+    color: #2C2D33;
+    margin: 0 5px 0 5px;
+}
+
+.chatbarInput {
+    width: 60%;
+    background-color: white;
+    border: none;
+    outline: none;
+    color: #2C2D33;
+}
+
+.reactionContain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chatHead {
+    flex: 1;
+}
+
+.chatBarSearch {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #F2F2F2;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+    padding: 3px 10px 3px 10px;
+}
+
+.chatBody {
+    flex: 8;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding-right: 20px;
+}
+
+.chats {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}

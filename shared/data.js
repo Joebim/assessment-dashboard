@@ -105,41 +105,38 @@ export const donutChartData = [
   { label: "Retention", value: 30 },
 ];
 
-// const labels = ['Sept 10', 'Sept 11', 'Sept 12', 'Sept 13', 'Sept 14', 'Sept 15', 'Sept 16'];
 
-// export const barChartOptions = {
-//   responsive: true,
-//   plugins: {
-//     legend: {
-//       position: 'top',
-//       display: false,
-//     },
-//     title: {
-//       display: false,
-//       text: 'Chart.js Bar Chart',
-//     },
-//   },
-//   chart: {
-//     type: 'bar',
-//     height: 200,
-//   },
-//   plotOptions: {
-//     bar: {
-//       borderRadius: 10, // Set the value to create rounded bars
-//     },
-//   },
-//   grid: {
-//     show: false, // Set show to false to remove the grid background
-//   },
+export const users = [
+  { name: 'John', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "sender" },
+  { name: 'Alice', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
+  { name: 'Bob', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
+  { name: 'Emily', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
+  { name: 'Michael', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
+  { name: 'Sophia', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
+  { name: 'David', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "sender" },
+  { name: 'Olivia', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
+  { name: 'Daniel', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
+  { name: 'Isabella', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
+  { name: 'Ethan', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
+  { name: 'Ava', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
+  { name: 'Alexander', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
+];
+
+// const getRandomDate = (start, end) => {
+//   return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
 // };
 
-// export const barChartData = {
-//   labels,
-//   datasets: [
-//     {
-//       label: 'Dataset 1',
-//       data: labels.map(() => faker.datatype.number({ min: 20, max: 100 })),
-//       backgroundColor: 'rgba(255, 99, 132, 0.5)',
-//     },
-//   ],
-// };
+// // Generate chat messages for each user
+// for (let i = 0; i < users.length; i++) {
+//   const user = users[i];
+//   for (let j = 0; j < 5; j++) {
+//     let chat = '';
+//     for (let k = 0; k < 5; k++) {
+//       chat += faker.lorem.words(4) + ' '; // 20 words (4 words per message)
+//     }
+//     user.chats.push({
+//       time: getRandomDate(new Date(2023, 0, 1), new Date()), // Random date within this year
+//       message: chat.trim(),
+//     });
+//   }
+// }

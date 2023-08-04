@@ -1,6 +1,7 @@
 .dashboard {
-    padding-left: 250px;
-    height: 110vh;
+    padding-top: 80px;
+    height: 130vh;
+    transition: 0.3s ease-in-out;
 }
 
 .dashboardContain {
@@ -198,6 +199,7 @@
     display: flex;
     flex-direction: column;
     padding: 12px;
+    overflow-y: scroll;
 }
 
 .orders h1 {
@@ -214,6 +216,7 @@
     flex-direction: row;
     align-items: center;
     padding: 5px 10px 5p 10px;
+    cursor: pointer;
 }
 
 .orderItemPhoto {
@@ -371,4 +374,88 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+.dashboard {
+    height: 100%;
+}
+
+   .dashboardContain {
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    display: grid;
+
+    height: 100%;
+   }
+
+   .sale {
+  
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 150px;
+}
+
+.customer {
+    
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 150px;
+
+}
+
+.order {
+    
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 150px;
+
+}
+
+.marketing {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    height: 320px;
+}
+
+.product {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    height: 150px;
+}
+
+.cart {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    height: 150px;
+}
+
+.summary {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    height: 320px;
+}
+
+.orders {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 11;
+    height: 650px;
+}
 }

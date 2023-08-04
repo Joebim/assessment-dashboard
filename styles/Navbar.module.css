@@ -2,6 +2,9 @@
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
     background-color: white;
+    padding-left: 250px;
+    position: fixed;
+    width: 100%;
 }
 
 .navTopBar {
@@ -46,6 +49,9 @@
     background-color: #fff;
     padding: 0.5rem 1rem;
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .downArrow {
@@ -76,10 +82,23 @@
     align-items: center;
     justify-content: center;
     background-color: #53545C;
+    overflow: hidden;
+}
+
+.icon {
+    height: 100%;
+    width: 100%;
 }
 
 .notificationLogo {
     width: 18px;
     height: 18px;
     transition: 0.2s ease-in-out;
+}
+
+.crumbs {
+    font-size: 12px;
+    color: #5E6366;
+    font-weight: 500;
+    padding-left: 5px;
 }

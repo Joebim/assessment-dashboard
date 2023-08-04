@@ -20,12 +20,10 @@ import { barChartOptions } from "../shared/data";
 import { barChartData } from "../shared/data";
 import { MenuContext } from "../components/context/menuContext";
 import { useContext } from "react";
+import Router from "next/router";
 
 export default function Dashboard() {
 
-  const [isCollapse, setIsCollapse] = useContext(MenuContext);
-
-  
   var options = {
     series: [
       {
@@ -63,6 +61,7 @@ export default function Dashboard() {
     ],
     chart: {
       height: 200,
+      width: '100%',
       type: "rangeBar",
       zoom: {
         enabled: false,
@@ -138,11 +137,13 @@ export default function Dashboard() {
     currency: "NGN",
   });
 
-  console.log("sales", sales);
+
 
   return (
-    <div className={`${styles.dashboard} ${isCollapse ? "dashboard-collapse" : "sidebar-visible"}`}>
-      <Navbar />
+    // <MenuContext.Consumer>
+    //     {({ isCollapse, setIsCollapse }) => (
+    <div className={`${styles.dashboard}`}>
+      
       <div className={styles.dashboardContain}>
         <div className={styles.sale}>
           <div className={styles.cardTopInfo}>
@@ -332,7 +333,7 @@ export default function Dashboard() {
         <div className={styles.summary}>
           <div className={styles.cardTopInfo}>
             <div className={styles.summaryTitleContain}>
-              <h1>Marketing</h1>
+              <h1>Summary</h1>
               <div className={styles.summaryDropdown}>
                 <p>This Week</p>
                 <MdOutlineKeyboardArrowDown
@@ -367,5 +368,7 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
+    //  )}
+    //  </MenuContext.Consumer>
   );
 }

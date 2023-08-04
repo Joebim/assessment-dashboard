@@ -4,7 +4,6 @@ import Iphone1 from "../../public/iphone1.svg";
 import Iphone2 from "../../public/iphone2.svg";
 
 export default function Order(props) {
-  console.log("props.type", props.orders);
   return (
     <>
       {props.orders.map((item, id) => (
@@ -23,26 +22,15 @@ export default function Order(props) {
               <p>{item.date}</p>
             </div>
             <div className={styles.orderItemBottom}>
-              <p>{item.amount} x {item.quantity}</p>
+              <p>
+                {item.amount} x {item.quantity}
+              </p>
               {item.status == "Pending" ? (
-                <div className={styles.itemStatusPending}>
-                  {item.status}
-                </div>
+                <div className={styles.itemStatusPending}>{item.status}</div>
               ) : (
-                <div className={styles.itemStatusCompleted}>
-                  {item.status}
-                </div>
+                <div className={styles.itemStatusCompleted}>{item.status}</div>
               )}
             </div>
-            {/* </div> */}
-            {/* <div className={styles.orderItemBottom}>
-              <div className={styles.orderItemLeftBottom}>
-                <p>View</p>
-              </div>
-              <div className={styles.orderItemRightBottom}>
-                <p>View</p>
-              </div>
-            </div> */}
           </div>
           <hr />
         </div>

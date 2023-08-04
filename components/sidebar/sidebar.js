@@ -18,18 +18,15 @@ import { useContext, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { MenuContext } from "../context/menuContext";
 
+
 function Sidebar() {
-  const [isCollapse, setIsCollapse] = useContext(MenuContext);
+
+  let toggleState = useContext(MenuContext);
+  const {isCollapse} = toggleState
 
 
-  const toggleMenu = () => {
-    setIsCollapse((prev) => !prev);
-  };
   const router = useRouter();
 
-  console.log("router.pathname", router.pathname);
-
-  // Define your sidebar items with their paths
   const sidebarItems = [
     {
       name: "Dashboard",
@@ -112,11 +109,12 @@ function Sidebar() {
               width={16}
               height={16}
               className={styles.logo}
+              priority
             />
             <h1 className={`${styles.logoText} logoText`}>Metrics</h1>
           </div>
           <div className={styles.menuContain}
-          onClick={toggleMenu}
+          onClick={()=> toggleState.setIsCollapse(!isCollapse)}
           >
             <HiMenu width={10} height={10} className={`${styles.menuLogo}`} />
           </div>
@@ -148,10 +146,10 @@ function Sidebar() {
 
       <div className={styles}>
         <ul>
-          <div className={styles.contactBtn}>
+          <div className={`${styles.contactBtn} contactBtn`} >
             <Link href="/other-pages/some-page">
-              <div className={`${styles.linkWrap} linkWrap`}>
-                <Headphones width={10} height={10} className={styles.navLogo} />
+              <div className={`${styles.contactWrap} contactWrap`}>
+                <Headphones width={10} height={10} className={`${styles.contactLogo} contactLogo`} />
                 <p className={`${styles.navText} navText`}>Contact Support</p>
               </div>
             </Link>
