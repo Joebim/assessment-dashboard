@@ -7,13 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
-    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "homepage": "https://joebim.github.io/assessment-dashboard",
   "dependencies": {
     "apexcharts": "^3.41.1",
     "chart.js": "^4.3.2",
+    "gh-pages": "^5.0.0",
     "next": "13.4.12",
     "react": "18.2.0",
     "react-apexcharts": "^1.4.1",
