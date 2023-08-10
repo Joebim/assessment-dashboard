@@ -140,7 +140,7 @@ function Sidebar() {
                     router.pathname === item.path ? "selected" : ""
                   }`}
                 >
-                  <Link href={item.path}>
+                  <Link href={item.path} as={process.env.BACKEND_URL + item.path}>
                     <div className={`${styles.linkWrap} linkWrap`}>
                       {item.icon}
                       <p className={`${styles.navText} navText`}>{item.name}</p>

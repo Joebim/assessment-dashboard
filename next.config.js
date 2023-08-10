@@ -25,6 +25,8 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
+  basePath: '/assessment-dashboard',
+  assetPrefix: !debug ? 'assessment-dashboard' : ''
 }
 
 module.exports = nextConfig

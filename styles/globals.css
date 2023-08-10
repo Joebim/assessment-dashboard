@@ -67,6 +67,10 @@ h1 {
   stroke: white;
 }
 
+.selected:hover .navLogo path[stroke="#53545C"] {
+  stroke: #53545C;
+}
+
 .selected .navText {
   color: white;
 }
