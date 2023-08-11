@@ -13,9 +13,7 @@ import Counter from "./Counter";
 import Logout from "../../public/logout.svg";
 import { FiChevronRight } from "react-icons/fi";
 import { useRouter } from "next/router";
-import { it } from "faker/lib/locales";
 import { useContext, useState } from "react";
-import { HiMenu } from "react-icons/hi";
 import { MenuContext } from "../context/menuContext";
 
 function Sidebar() {
@@ -27,13 +25,9 @@ function Sidebar() {
   const toggleSidebar = (path) => {
     const currentRoute = router.pathname;
     if (currentRoute === path) {
-      toggleState.setIsCollapse(!isCollapse)
+      toggleState.setIsCollapse(!isCollapse);
     }
   };
-
- 
-    
-
 
   const sidebarItems = [
     {
@@ -42,11 +36,7 @@ function Sidebar() {
       counter: 6,
       isCount: false,
       icon: (
-        <Category
-          width={10}
-          height={10}
-          className={`${styles.DashboardLogo} DashboardLogo`}
-        />
+        <Category width={10} height={10} className={`${styles.DashboardLogo} DashboardLogo`} />
       ),
     },
     {
@@ -135,12 +125,17 @@ function Sidebar() {
               {sidebarItems.map((item, index) => (
                 <li
                   key={index}
-                  onClick={() => {toggleSidebar(item.path)}}
+                  onClick={() => {
+                    toggleSidebar(item.path);
+                  }}
                   className={`${
                     router.pathname === item.path ? "selected" : ""
                   }`}
                 >
-                  <Link href={item.path}>
+                  <Link
+                    href={item.path}
+                    as={process.env.BACKEND_URL + item.path}
+                  >
                     <div className={`${styles.linkWrap} linkWrap`}>
                       {item.icon}
                       <p className={`${styles.navText} navText`}>{item.name}</p>

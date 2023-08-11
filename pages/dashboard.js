@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Navbar from "../components/navbar/navbar";
 import styles from "../styles/Dashboard.module.css";
 import { sales } from "../shared/data";
 import { customers } from "../shared/data";
@@ -16,11 +14,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { ItemOrders } from "../shared/data";
 import DonutChart from "../components/charts/Donut-chart";
 import BarChart from "../components/charts/bar-chart";
-import { barChartOptions } from "../shared/data";
-import { barChartData } from "../shared/data";
-import { MenuContext } from "../components/context/menuContext";
-import { useContext } from "react";
-import Router from "next/router";
+
 
 export default function Dashboard() {
 
