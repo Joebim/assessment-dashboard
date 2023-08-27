@@ -1,32 +1,32 @@
 import faker from 'faker';
 
 
-export const sales = {
+export const Sales = {
   amount: 4000000,
   volume: 500,
   percentageEarned: 10,
 };
 
-export const customers = {
+export const Customers = {
   numberOfCustomers: 1250,
   numberOfActiveCustomers: 1180,
   percentageOfCustomersGained: 85,
   percentageOfActiveCustomers: 15.8,
 };
 
-export const orders = {
+export const Orders = {
   numberOfOrders: 445,
   pendingOrders: 5,
   completedOrders: 450,
 };
 
-export const products = {
+export const Products = {
   pendingProducts: 45,
   activeProducts: 32,
   percentageOfActiveProducts: 24,
 };
 
-export const carts = {
+export const Carts = {
   abandoned: 20,
   customers: 30,
   percentageEarned: 0.0,

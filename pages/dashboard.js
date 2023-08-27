@@ -1,9 +1,9 @@
 import styles from "../styles/Dashboard.module.css";
-import { sales } from "../shared/data";
-import { customers } from "../shared/data";
-import { orders } from "../shared/data";
-import { products } from "../shared/data";
-import { carts } from "../shared/data";
+import { Sales } from "../shared/data";
+import { Customers } from "../shared/data";
+import { Orders } from "../shared/data";
+import { Products } from "../shared/data";
+import { Carts } from "../shared/data";
 import Graph from "../public/GraphIcon.svg";
 import User from "../public/2User.svg";
 import Bag from "../public/BagIcon.svg";
@@ -156,15 +156,15 @@ export default function Dashboard() {
             <div className={styles.cardBottomInfoContainRight}>
               <p>Sales</p>
               <h1 className={styles.currency}>
-                {NGNaira.format(sales.amount)}
+                {NGNaira.format(Sales.amount)}
               </h1>
             </div>
             <div className={styles.cardBottomInfoContainLeft}>
               <p>Volume</p>
               <div className={styles.cardBottomInfoContainWrap}>
-                <h1 className={styles.currency}>{sales.volume}</h1>
+                <h1 className={styles.currency}>{Sales.volume}</h1>
                 <span className={styles.percentage}>
-                  +{sales.percentageEarned}%
+                  +{Sales.percentageEarned}%
                 </span>
               </div>
             </div>
@@ -190,10 +190,10 @@ export default function Dashboard() {
               <p>Customers</p>
               <div className={styles.cardBottomInfoContainWrap}>
                 <h1 className={styles.currency}>
-                  {customers.numberOfActiveCustomers}
+                  {Customers.numberOfActiveCustomers}
                 </h1>
                 <span className={styles.percentage}>
-                  +{customers.percentageOfCustomersGained}%
+                  +{Customers.percentageOfCustomersGained}%
                 </span>
               </div>
             </div>
@@ -201,10 +201,10 @@ export default function Dashboard() {
               <p>Active</p>
               <div className={styles.cardBottomInfoContainWrap}>
                 <h1 className={styles.currency}>
-                  {customers.numberOfActiveCustomers}
+                  {Customers.numberOfActiveCustomers}
                 </h1>
                 <span className={styles.percentage}>
-                  +{customers.percentageOfActiveCustomers}%
+                  +{Customers.percentageOfActiveCustomers}%
                 </span>
               </div>
             </div>
@@ -228,18 +228,18 @@ export default function Dashboard() {
           <div className={styles.cardBottomInfo}>
             <div className={styles.cardBottomInfoContainRight}>
               <p>All Orders</p>
-              <h1 className={styles.currency}>{orders.numberOfOrders}</h1>
+              <h1 className={styles.currency}>{Orders.numberOfOrders}</h1>
             </div>
             <div className={styles.cardBottomInfoContainLeft}>
               <p>Pending</p>
               <div className={styles.cardBottomInfoContainWrap}>
-                <h1 className={styles.currency}>{orders.pendingOrders}</h1>
+                <h1 className={styles.currency}>{Orders.pendingOrders}</h1>
               </div>
             </div>
             <div className={styles.cardBottomInfoContainLeft}>
               <p>Completed</p>
               <div className={styles.cardBottomInfoContainWrap}>
-                <h1 className={styles.currency}>{orders.completedOrders}</h1>
+                <h1 className={styles.currency}>{Orders.completedOrders}</h1>
               </div>
             </div>
           </div>
@@ -276,14 +276,14 @@ export default function Dashboard() {
           <div className={styles.cardBottomInfo}>
             <div className={styles.cardBottomInfoContainRight}>
               <p className={styles.productText}>All Products</p>
-              <h1 className={styles.currency}>{products.activeProducts}</h1>
+              <h1 className={styles.currency}>{Products.activeProducts}</h1>
             </div>
             <div className={styles.cardBottomInfoContainLeft}>
               <p className={styles.productText}>Active</p>
               <div className={styles.cardBottomInfoContainWrap}>
-                <h1 className={styles.currency}>{products.pendingProducts}</h1>
+                <h1 className={styles.currency}>{Products.pendingProducts}</h1>
                 <span className={styles.percentage}>
-                  +{products.percentageOfActiveProducts}%
+                  +{Products.percentageOfActiveProducts}%
                 </span>
               </div>
             </div>
@@ -308,16 +308,16 @@ export default function Dashboard() {
             <div className={styles.cardBottomInfoContainRight}>
               <p className={styles.cartText}>Abandoned Cart</p>
               <div className={styles.cardBottomInfoContainWrap}>
-                <h1 className={styles.currency}>{carts.abandoned}</h1>
+                <h1 className={styles.currency}>{Carts.abandoned}</h1>
                 <span className={styles.percentage}>
-                  +{carts.percentageEarned}%
+                  +{Carts.percentageEarned}%
                 </span>
               </div>
             </div>
             <div className={styles.cardBottomInfoContainLeft}>
               <p>Customers</p>
               <div className={styles.cardBottomInfoContainWrap}>
-                <h1 className={styles.currency}>{carts.customers}</h1>
+                <h1 className={styles.currency}>{Carts.customers}</h1>
               </div>
             </div>
           </div>
