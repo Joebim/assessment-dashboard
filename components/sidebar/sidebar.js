@@ -9,7 +9,7 @@ import Settings from "../../public/settings.svg";
 import Gift from "../../public/gift.svg";
 import Headphones from "../../public/headphones.svg";
 import styles from "../../styles/Sidebar.module.css";
-import Counter from "./counter.js";
+import Counter from "../counter/counter.js";
 import Logout from "../../public/logout.svg";
 import { FiChevronRight } from "react-icons/fi";
 import { useRouter } from "next/router";
