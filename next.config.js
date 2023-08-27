@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -25,6 +26,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
+  target: 'experimental-serverless-trace',
 }
 
 module.exports = nextConfig

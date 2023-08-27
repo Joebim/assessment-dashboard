@@ -5,7 +5,6 @@ import { users } from "../../shared/data";
 import Chat from "../../components/chat/chat";
 import Photo1 from "../../public/photo1.svg";
 import { PiHandbagSimpleLight } from "react-icons/pi";
-import Send from "../../public/send.svg";
 import Smile from "../../public/smile.svg";
 import Plus from "../../public/plus.svg";
 import RightBubble from "../../components/chat-bubble/right-bubble";
