@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html,
 body {
   padding: 0;
@@ -51,6 +56,10 @@ h1 {
 .apexcharts-legend-marker {
   width: 8px !important;
   height: 8px !important;
+}
+
+.apexcharts-menu-item {
+  color: black;
 }
 
 .selected .DashboardLogo {

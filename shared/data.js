@@ -1,5 +1,4 @@
-import faker from 'faker';
-
+import faker from "faker";
 
 export const Sales = {
   amount: 4000000,
@@ -98,26 +97,122 @@ export const ItemOrders = [
   },
 ];
 
-
 export const donutChartData = [
   { label: "Acquisition", value: 60 },
   { label: "Purchase", value: 10 },
   { label: "Retention", value: 30 },
 ];
 
-
 export const users = [
-  { name: 'John', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "sender" },
-  { name: 'Alice', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
-  { name: 'Bob', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
-  { name: 'Emily', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
-  { name: 'Michael', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
-  { name: 'Sophia', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
-  { name: 'David', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "sender" },
-  { name: 'Olivia', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
-  { name: 'Daniel', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
-  { name: 'Isabella', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
-  { name: 'Ethan', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
-  { name: 'Ava', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: false, type: "sender" },
-  { name: 'Alexander', chats: "Hi, I would like to know more about the product.", time: "12:57 am", date: "12 August 2022", new: true, type: "receiver" },
+  {
+    name: "John",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: true,
+    type: "sender",
+  },
+  {
+    name: "Alice",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: false,
+    type: "sender",
+  },
+  {
+    name: "Bob",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: true,
+    type: "receiver",
+  },
+  {
+    name: "Emily",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: false,
+    type: "sender",
+  },
+  {
+    name: "Michael",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: true,
+    type: "receiver",
+  },
+  {
+    name: "Sophia",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: false,
+    type: "sender",
+  },
+  {
+    name: "David",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: true,
+    type: "sender",
+  },
+  {
+    name: "Olivia",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: false,
+    type: "sender",
+  },
+  {
+    name: "Daniel",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: true,
+    type: "receiver",
+  },
+  {
+    name: "Isabella",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: false,
+    type: "sender",
+  },
+  {
+    name: "Ethan",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: true,
+    type: "receiver",
+  },
+  {
+    name: "Ava",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: false,
+    type: "sender",
+  },
+  {
+    name: "Alexander",
+    chats: "Hi, I would like to know more about the product.",
+    time: "12:57 am",
+    date: "12 August 2022",
+    new: true,
+    type: "receiver",
+  },
+];
+
+export const duration = [
+  { time: "This Week" },
+  { time: "This Month" },
+  { time: "This Year" },
+  { time: "Today" },
 ];
