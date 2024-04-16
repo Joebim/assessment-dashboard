@@ -14,10 +14,9 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { ItemOrders } from "../shared/data";
 import DonutChart from "../components/charts/Donut-chart";
 import BarChart from "../components/charts/bar-chart";
-
+import Dropdown from "../components/dashboard/dropdown";
 
 export default function Dashboard() {
-
   var options = {
     series: [
       {
@@ -55,7 +54,7 @@ export default function Dashboard() {
     ],
     chart: {
       height: 200,
-      width: '100%',
+      width: "100%",
       type: "rangeBar",
       zoom: {
         enabled: false,
@@ -108,7 +107,7 @@ export default function Dashboard() {
           }
         },
         style: {
-          fontSize: "10px", 
+          fontSize: "10px",
           colors: "#A6A8B1",
         },
       },
@@ -131,11 +130,8 @@ export default function Dashboard() {
     currency: "NGN",
   });
 
-
-
   return (
     <div className={`${styles.dashboard}`}>
-      
       <div className={styles.dashboardContain}>
         <div className={styles.sale}>
           <div className={styles.cardTopInfo}>
@@ -143,13 +139,12 @@ export default function Dashboard() {
               <Graph width={10} height={10} className={styles.logo} />
             </div>
             <div>
-              <div className={styles.dropdown}>
-                <p>This Week</p>
-                <MdOutlineKeyboardArrowDown
-                  width="20"
-                  className={styles.downArrow}
-                />
-              </div>
+              <Dropdown
+                
+                class="bg-white"
+                dropClass="bg-white"
+                textClass="text-black"
+              />
             </div>
           </div>
           <div className={styles.cardBottomInfo}>
@@ -176,13 +171,12 @@ export default function Dashboard() {
               <User width={10} height={10} className={styles.logo} />
             </div>
             <div>
-              <div className={styles.dropdown}>
-                <p>This Week</p>
-                <MdOutlineKeyboardArrowDown
-                  width="20"
-                  className={styles.downArrow}
-                />
-              </div>
+            <Dropdown
+                
+                class="bg-white"
+                dropClass="bg-white"
+                textClass="text-black"
+              />
             </div>
           </div>
           <div className={styles.cardBottomInfo}>
@@ -216,13 +210,12 @@ export default function Dashboard() {
               <Bag width={10} height={10} className={styles.logo} />
             </div>
             <div>
-              <div className={styles.dropdown}>
-                <p>This Week</p>
-                <MdOutlineKeyboardArrowDown
-                  width="20"
-                  className={styles.downArrow}
-                />
-              </div>
+            <Dropdown
+                
+                class="bg-white"
+                dropClass="bg-white"
+                textClass="text-black"
+              />
             </div>
           </div>
           <div className={styles.cardBottomInfo}>
@@ -250,13 +243,12 @@ export default function Dashboard() {
               <h1>Marketing</h1>
             </div>
             <div>
-              <div className={styles.dropdown}>
-                <p>This Week</p>
-                <MdOutlineKeyboardArrowDown
-                  width="20"
-                  className={styles.downArrow}
-                />
-              </div>
+            <Dropdown
+                
+                class="bg-white"
+                dropClass="bg-white"
+                textClass="text-black"
+              />
             </div>
           </div>
           <div className={styles.marketingChartContain}>
@@ -295,13 +287,12 @@ export default function Dashboard() {
               <Cart width={10} height={10} className={styles.logo} />
             </div>
             <div>
-              <div className={styles.dropdown}>
-                <p>This Week</p>
-                <MdOutlineKeyboardArrowDown
-                  width="20"
-                  className={styles.downArrow}
-                />
-              </div>
+            <Dropdown
+                
+                class="bg-white"
+                dropClass="bg-white"
+                textClass="text-black"
+              />
             </div>
           </div>
           <div className={styles.cardBottomInfo}>
@@ -326,27 +317,19 @@ export default function Dashboard() {
           <div className={styles.cardTopInfo}>
             <div className={styles.summaryTitleContain}>
               <h1>Summary</h1>
-              <div className={styles.summaryDropdown}>
-                <p>This Week</p>
-                <MdOutlineKeyboardArrowDown
-                  width="20"
-                  className={styles.downArrow}
-                />
-              </div>
+              
             </div>
             <div>
-              <div className={styles.dropdown}>
-                <p>This Week</p>
-                <MdOutlineKeyboardArrowDown
-                  width="20"
-                  className={styles.downArrow}
-                />
-              </div>
+            <Dropdown
+                
+                class="bg-white"
+                dropClass="bg-white"
+                textClass="text-black"
+              />
             </div>
           </div>
           <div className={styles.marketingChartContain}>
             <BarChart options={options} />;
-    
           </div>
         </div>
         <div className={styles.orders}>
@@ -357,6 +340,5 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
-  
   );
 }

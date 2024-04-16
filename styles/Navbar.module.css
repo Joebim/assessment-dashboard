@@ -21,11 +21,8 @@
 }
 
 .navTopBar p {
-    font-size: 15px;
     font-weight: 500;
     color: #5E6366;
-    margin-left: 10px;
-    padding-left: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,7 +61,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #FEF5EA;
     border-radius: 5px;
     padding: 3px 10px 3px 10px;
 }

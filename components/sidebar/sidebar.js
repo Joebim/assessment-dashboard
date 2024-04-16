@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Proto from "../../public/Proto.svg";
+import DashboardLogo from "../../public/dashboardLogo.svg";
 import Category from "../../public/category.svg";
 import Bag from "../../public/bag.svg";
 import User from "../../public/user.svg";
@@ -105,12 +105,12 @@ function Sidebar() {
         <div className={styles.sidebarTop}>
           <div className={styles.logoContain}>
             <div className={styles.logoWrapper}>
-              <Proto
+              <DashboardLogo
                 width={16}
                 height={16}
                 className={styles.logo}
               />
-              <h1 className={`${styles.logoText} logoText`}>Protox</h1>
+              <h1 className={`${styles.logoText} logoText`}>Inventio</h1>
             </div>
             {/* <div
               className={styles.menuContain}
